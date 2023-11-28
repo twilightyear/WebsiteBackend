@@ -20,7 +20,15 @@ sudo npm cache clean -f
 npx sequelize-cli init
 ```
 #
-**2. 모델파일 생성**
+
+
+**2. 데이터베이스 생성**
+```
+npx sequelize-cli db:create
+```
+
+#
+**3. 모델파일 생성**
 
 ```
 sequelize model:generate --name community --attributes title:string,content:string
@@ -31,7 +39,7 @@ sequelize model:generate --name comment --attributes text:string
 npx sequelize-cli db:migrate
 ```
 #
-**3. 관계형 데이터베이스 정립**
+**4. 관계형 데이터베이스 정립**
 
 */models/comment.js* 에 다음과 같은 코드를 삽입하여 관계형 데이터베이스를 정립합니다.
 ```js
@@ -51,11 +59,7 @@ static  associate(models) {
 	});
 }
 ```
-#
-**4. 데이터베이스 생성**
-```
-npx sequelize-cli db:create
-```
+
 #
 **5. 데이터베이스 설정**
 
