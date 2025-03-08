@@ -7,7 +7,7 @@ const app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-//열릴 포트
+//열릴 포트 
 const port = 3000;
 
 //게시판 라우터 가져오기
